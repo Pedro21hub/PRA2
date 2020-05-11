@@ -1,0 +1,60 @@
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "Ocurrences")
+public class Ocurrence  {
+    @PrimaryKey(autoGenerate = true)
+    
+    @NonNull
+    
+    @ColumnInfo(name = "ocurrenceId")
+    private int oId;
+    
+    @Nullable
+    
+    @ColumnInfo(name = "Description")
+    private String oDescription;
+    
+    public int getId() {
+        return oId;
+    }
+    public void setId(@NonNull int id) {
+        oId = id;
+    }
+    public String getDescription() {
+        return oDescription;
+    }
+    public void setDescription(@Nullable String Description) {
+        oDescription = Description;
+    }
+    public String getForwarding() {
+        return oForwarding;
+    }
+    public void setForwarding(String Forwarding) {
+        oForwarding = Forwarding;
+    }
+    public String getCreationDate() {
+        return oCreationDate;
+    }
+    public void setCreationDate(String creationDate) {
+        oCreationDate = creationDate;
+    }
+    private String oForwarding;
+    private String oCreationDate;
+    public int getGrade() {
+        return oGrade;
+    }
+    public void setGrade(int Grade) {
+        oGrade = Grade;
+    }
+    private int oGrade;
+    public Book(String Description, String Forwarding, int Grade, String creationDate) {
+        oDescription = Description;
+        oForwarding = Forwarding;
+        oGrade = Grade;
+        oCreationDate = creationDate;
+    }
+}
